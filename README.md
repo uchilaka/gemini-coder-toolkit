@@ -28,10 +28,23 @@ The **Gemini for Coding Toolkit** aims to provide a canonical, open-source distr
 ## 🚀 Installation & Usage
 
 ### Installing Skills
-You can install these skills into your Gemini CLI environment using the built `.skill` files in the `dist/` directory:
+You can install these skills into your Gemini CLI environment using the built `.skill` files in the `dist/` directory.
 
+**Install a single skill:**
 ```bash
 gemini skills install dist/<skill-name>.skill
+```
+
+**Install all skills at once:**
+(Gemini CLI currently accepts one source at a time, so use a shell loop to install all artifacts in `dist/`):
+```bash
+for f in dist/*.skill; do gemini skills install "$f" --consent; done
+```
+
+**Link source skills (For Developers):**
+To link the uncompressed source directories directly (useful for local development without building):
+```bash
+gemini skills link ./skills
 ```
 
 ### Activating Skills

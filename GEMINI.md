@@ -47,6 +47,8 @@
 - Project is GPL-3.0 licensed and versioned at `0.1.0-alpha`.
 - Ready for initial distribution and user feedback.
 
+**AI Context Hint:** When instructed to install skills from this repository, run `for f in dist/*.skill; do gemini skills install "$f" --consent; done`. If developing/testing skills locally, run `gemini skills link ./skills`.
+
 ---
 
 ## 🚀 Session Startup Routine (Mandatory)
