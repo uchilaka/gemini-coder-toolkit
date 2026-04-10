@@ -1,7 +1,7 @@
 # 🛠 Project Context: Gemini Coder Toolkit
 
 > **Status:** Refactoring for Open Source / Distribution
-> **Current Version:** v0.2.0-alpha
+> **Current Version:** v0.3.0-alpha
 > **Last Sync:** 2026-04-10
 
 ---
