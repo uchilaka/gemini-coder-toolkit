@@ -56,7 +56,7 @@ Once installed, activate a skill within a Gemini CLI session:
 activate_skill({ name: "start-worktree" })
 ```
 
-## 👩‍💻 Development
+## 👩🏾‍💻 Development
 
 If you want to modify a skill or add a new one:
 
