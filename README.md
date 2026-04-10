@@ -22,6 +22,7 @@ The **Gemini for Coding Toolkit** aims to provide a canonical, open-source distr
 | `finish-worktree` | Exits Git worktrees, prepares draft PRs, and applies templates. | [Docs](./docs/finish-worktree.md) |
 | `import-profile` | Syncs global preferences and memory from external profiles. | [Docs](./docs/import-profile.md) |
 | `markdown-manager` | Enforces documentation standards and manages planning artifacts. | [Docs](./docs/markdown-manager.md) |
+| `release` | Automates the version bump, changelog, build, and git release process. | [Docs](./docs/release.md) |
 | `specialist` | Orchestrates expert code, architecture, security, design, and devops reviews. | [Docs](./docs/specialist.md) |
 | `start-worktree` | Scaffolds isolated work environments for new Jira tickets. | [Docs](./docs/start-worktree.md) |
 | `summon-profile` | Synchronizes local profile with remote machines via scp. | [Docs](./docs/summon-profile.md) |
