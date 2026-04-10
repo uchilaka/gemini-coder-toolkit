@@ -5,6 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.5.0-alpha] - 2026-04-10
+
+### Added
+- Established `STYLE_GUIDE.md` mandating "medium dark" skin tone (🏾) for all emojis.
+- Integrated `markdownlint` configuration (.markdownlint.json) for consistent documentation quality.
+- Added VS Code workspace settings (.vscode/settings.json) to automate formatting on save and paste.
+
+### Changed
+- Enhanced the `specialist` skill (Design Reviewer) to explicitly enforce project style rules.
+
 ## [0.4.1-alpha] - 2026-04-10
 
 ### Changed
