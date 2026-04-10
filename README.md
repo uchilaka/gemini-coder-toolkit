@@ -1,0 +1,60 @@
+# Gemini for Coding Toolkit
+
+A collection of specialized task-automation skills designed explicitly for the **Gemini CLI** ecosystem. 
+
+This toolkit provides high-leverage workflows for software engineers, helping automate the repetitive parts of the development lifecycle—from starting a feature in an isolated worktree to drafting the final pull request.
+
+## 🎯 Project Mission
+
+The **Gemini for Coding Toolkit** aims to provide a canonical, open-source distribution of skills that empower developers to work more efficiently within the Gemini CLI. Each skill is designed to be surgical, predictable, and highly integrated with standard engineering tools (Git, Jira, etc.).
+
+## 🏗 Project Structure
+
+- `skills/`: **The Source of Truth.** Uncompressed source folders for each skill. Modify code here.
+- `dist/`: **Distribution.** Versioned `.skill` files (ZIP archives) ready for installation.
+- `docs/`: **Documentation.** Human-friendly guides and references for each skill.
+- `LICENSE`: The project is licensed under **GPL-3.0**.
+
+## 🛠 Available Skills
+
+| Skill | Description | Documentation |
+| :--- | :--- | :--- |
+| `finish-worktree` | Exits Git worktrees, prepares draft PRs, and applies templates. | [Docs](./docs/finish-worktree.md) |
+| `import-profile` | Syncs global preferences and memory from external profiles. | [Docs](./docs/import-profile.md) |
+| `markdown-manager` | Enforces documentation standards and manages planning artifacts. | [Docs](./docs/markdown-manager.md) |
+| `start-worktree` | Scaffolds isolated work environments for new Jira tickets. | [Docs](./docs/start-worktree.md) |
+| `summon-profile` | Synchronizes local profile with remote machines via scp. | [Docs](./docs/summon-profile.md) |
+
+## 🚀 Installation & Usage
+
+### Installing Skills
+You can install these skills into your Gemini CLI environment using the built `.skill` files in the `dist/` directory:
+
+```bash
+gemini skills install dist/<skill-name>.skill
+```
+
+### Activating Skills
+Once installed, activate a skill within a Gemini CLI session:
+
+```javascript
+activate_skill({ name: "start-worktree" })
+```
+
+## 👩‍💻 Development
+
+If you want to modify a skill or add a new one:
+
+1.  Modify the source files in `skills/<skill-name>/`.
+2.  Run the build script to update the distribution archives:
+    ```bash
+    npm run build
+    ```
+3.  The updated `.skill` files will be available in the `dist/` folder.
+
+## ⚖️ License
+
+This project is licensed under the **GNU General Public License v3.0**. See the [LICENSE](./LICENSE) file for details.
+
+---
+**Note:** These skills are purpose-built for the Gemini CLI and its underlying context-injection mechanics. They are **not** generic agents compatible with other local LLM runners without modification.
