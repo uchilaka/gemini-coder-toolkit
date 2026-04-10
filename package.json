@@ -1,6 +1,6 @@
 {
   "name": "gemini-coder-toolkit",
-  "version": "0.5.1-alpha",
+  "version": "0.6.0-alpha",
   "description": "A collection of task-automation skills explicitly formatted and packaged for compatibility with the Gemini CLI environment.",
   "license": "GPL-3.0",
   "author": "Gemini CLI Users",

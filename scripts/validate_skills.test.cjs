@@ -3,7 +3,14 @@ const fs = require('fs');
 const path = require('path');
 
 const SKILLS_DIR = path.join(__dirname, '..', 'skills');
-const VALIDATOR_PATH = '/home/linuxbrew/.linuxbrew/Cellar/gemini-cli/0.37.1/libexec/lib/node_modules/@google/gemini-cli/bundle/builtin/skill-creator/scripts/validate_skill.cjs';
+let VALIDATOR_PATH;
+try {
+  const brewPrefix = execSync('brew --prefix gemini-cli', { encoding: 'utf8' }).trim();
+  VALIDATOR_PATH = path.join(brewPrefix, 'libexec/lib/node_modules/@google/gemini-cli/bundle/builtin/skill-creator/scripts/validate_skill.cjs');
+} catch (error) {
+  console.error('❌ Could not locate gemini-cli via Homebrew. Is it installed?');
+  process.exit(1);
+}
 
 console.log('🔍 Starting Skill Validation Suite...\n');
 

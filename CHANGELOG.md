@@ -5,6 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.6.0-alpha] - 2026-04-10
+
+### Added
+- **Robust MD5 Tracking:** Improved `import-profile` with cross-platform (macOS/Linux) hash detection for configuration drift analysis.
+- **Cross-Platform Tests:** Updated `validate_skills.test.cjs` to dynamically locate `gemini-cli` via Homebrew (`brew --prefix`) for compatibility across environments.
+
+### Changed
+- **Secure Git Crypt:** Refactored `start-worktree` to safely manage the `git-crypt` unlock process using secure temporary files (`mktemp`) and trap-based deletion, mitigating plaintext key exposure risks on disk.
+- **Framework Agnostic Setup:** Decoupled `start-worktree` from specific frameworks (Rails, Yarn) by introducing conditional environment setup logic, improving reusability for open-source distribution.
+- **Storage Standards:** Updated `start-worktree` to store draft PRs in project-local `.gemini/draft-prs/` instead of legacy `~/.claude/` paths.
+- **Documentation:** Updated `docs/` for `start-worktree` and `import-profile` to reflect new feature sets.
+
 ## [0.5.1-alpha] - 2026-04-10
 
 ### Fixed

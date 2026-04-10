@@ -1,7 +1,7 @@
 # 🛠 Project Context: Gemini Coder Toolkit
 
 > **Status:** Refactoring for Open Source / Distribution
-> **Current Version:** v0.5.1-alpha
+> **Current Version:** v0.5.2-alpha
 > **Last Sync:** 2026-04-10
 
 ---
@@ -35,6 +35,7 @@
 - [x] Overhaul README.md for open-source distribution
 - [x] Add CONTRIBUTING.md with community standards
 - [x] Verify build script and refresh distribution artifacts
+- [x] **Backport Latest Improvements:** Integrated Git Crypt support in `start-worktree` and robust MD5 tracking in `import-profile`.
 
 ---
 
@@ -44,7 +45,8 @@
 
 - Refactored `x-agent-toolkit` into `gemini-for-coding-toolkit`.
 - All skills extracted, documented, and packaged in `dist/`.
-- Project is GPL-3.0 licensed and versioned at `0.1.0-alpha`.
+- Project is GPL-3.0 licensed and versioned at `0.6.0-alpha`.
+- Added Git Crypt and robust MD5 tracking features.
 - Ready for initial distribution and user feedback.
 
 **AI Context Hint:** When instructed to install skills from this repository, run `for f in dist/*.skill; do gemini skills install "$f" --consent; done`. If developing/testing skills locally, run `gemini skills link ./skills`.
@@ -53,6 +55,6 @@
 
 ## 🚀 Session Startup Routine (Mandatory)
 
-2. **Interview User:** 
-   - Ask about the preferred **Open Source License**.
-   - Confirm the mapping of existing skills into the new structure.
+1. **Review Project Context:** Read the local `GEMINI.md` to understand the current mission and technical stack.
+2. **Review Recent Changes:** Check `CHANGELOG.md` to see the latest updates (e.g., Git Crypt support).
+
