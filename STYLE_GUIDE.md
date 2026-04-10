@@ -4,10 +4,13 @@ This document defines the standards for visual, documentation, and code style wi
 
 ## 😃 Emojis
 
-To maintain a consistent and inclusive visual identity, all emojis used in documentation, commit messages, and agent outputs MUST use the **medium-dark skin tone** (🏾) whenever a skin tone modifier is available.
+To maintain a consistent and inclusive visual identity, all emojis that **officially support skin tones** (typically people, body parts, and professions) MUST use the **medium-dark skin tone** (🏾).
 
-- **Correct:** 👍🏾, 👩🏾‍💻, 🏗🏾, 🚀 (no skin tone available)
-- **Incorrect:** 👍, 👩🏻‍💻, 🏗️
+- **Correct:** 👍🏾, 👩🏾‍💻, 👨🏾‍💻, 🤲🏾
+- **Do Not Modify:** 🏗, 🚀, 🎯, 🎨, 🧪 (Objects, places, and symbols do not support skin tones)
+
+### How to Check
+If applying the modifier (🏾) results in a separate block of color rather than a single unified emoji, the emoji does not support skin tones and should remain in its standard form.
 
 ## 📝 Markdown Standards
 

@@ -13,7 +13,7 @@
 
 ---
 
-## 🏗🏾 Planned Structure
+## 🏗 Planned Structure
 
 - `skills/`: Uncompressed source folders (The Source of Truth).
 - `dist/`: Versioned `.skill` files for distribution.
