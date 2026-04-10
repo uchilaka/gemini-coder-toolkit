@@ -5,6 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.6.1-alpha] - 2026-04-10
+
+### Added
+- **Compatibility Reviewer:** Introduced a new specialized reviewer persona to the `/specialist` skill focused on cross-platform compatibility across macOS, WSL2 (Unix LTS), and `mise`.
+- **Unified Testing:** Updated `specialist` skill to explicitly include compatibility as a core review domain.
+
 ## [0.6.0-alpha] - 2026-04-10
 
 ### Added
