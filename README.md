@@ -1,4 +1,4 @@
-# Gemini for Coding Toolkit
+# Gemini Coder Toolkit
 
 A collection of specialized task-automation skills designed explicitly for the **Gemini CLI** ecosystem. 
 
@@ -6,7 +6,7 @@ This toolkit provides high-leverage workflows for software engineers, helping au
 
 ## 🎯 Project Mission
 
-The **Gemini for Coding Toolkit** aims to provide a canonical, open-source distribution of skills that empower developers to work more efficiently within the Gemini CLI. Each skill is designed to be surgical, predictable, and highly integrated with standard engineering tools (Git, Jira, etc.).
+The **Gemini Coder Toolkit** aims to provide a canonical, open-source distribution of skills that empower developers to work more efficiently within the Gemini CLI. Each skill is designed to be surgical, predictable, and highly integrated with standard engineering tools (Git, Jira, etc.).
 
 ## 🏗 Project Structure
 
@@ -61,11 +61,15 @@ activate_skill({ name: "start-worktree" })
 If you want to modify a skill or add a new one:
 
 1.  Modify the source files in `skills/<skill-name>/`.
-2.  Run the build script to update the distribution archives:
+2.  **Validate** your changes using the test suite:
     ```bash
-    npm run build
+    yarn test
     ```
-3.  The updated `.skill` files will be available in the `dist/` folder.
+3.  **Build** the distribution archives:
+    ```bash
+    yarn build
+    ```
+4.  The updated `.skill` files will be available in the `dist/` folder.
 
 ## ⚖️ License
 
