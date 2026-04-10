@@ -5,6 +5,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.4.0-alpha] - 2026-04-10
+
+### Added
+- Mandatory `/specialist` review pass to the release workflow to identify risks before release.
+- User interview stage to the release process for informed decision-making based on review findings.
+
+### Changed
+- Updated documentation for the `release` skill to include new quality gates.
+
 ## [0.3.0-alpha] - 2026-04-10
 
 ### Added

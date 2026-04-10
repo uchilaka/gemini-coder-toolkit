@@ -4,14 +4,16 @@ The `/release` skill automates the complex and error-prone process of cutting a 
 
 ## Workflow
 
-1.  **Safety First:** Runs existing tests and validations to ensure the repository is in a releasable state.
-2.  **Summary:** Summarizes unreleased changes from the git history.
-3.  **Coordination:** Prompts the user for the new version number and release notes.
-4.  **Automation:**
+1.  **Specialist Review:** Conducts a mandatory full review across all 7 technical domains (Code, Security, Architecture, etc.) to identify risks or technical debt before any changes are committed.
+2.  **User Interview:** Pauses the process to present review findings. The user must decide whether to fix issues, proceed as-is, or adjust the release version.
+3.  **Safety First:** Runs existing tests and validations to ensure the repository is in a releasable state.
+4.  **Summary:** Summarizes unreleased changes from the git history.
+5.  **Coordination:** Prompts the user for the new version number and release notes, informed by the specialist review findings.
+6.  **Automation:**
     *   Updates `package.json` and `GEMINI.md`.
     *   Drafts the `CHANGELOG.md`.
     *   Regenerates all `.skill` files in `dist/`.
-5.  **Finalization:** Creates a semantic commit, generates a git tag, and pushes everything to the remote.
+7.  **Finalization:** Creates a semantic commit, generates a git tag, and pushes everything to the remote.
 
 ## Usage Example
 
