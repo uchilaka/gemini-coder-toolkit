@@ -1,4 +1,4 @@
-# 🛠 Project Context: Gemini for Coding Toolkit
+# 🛠 Project Context: Gemini Coder Toolkit
 
 > **Status:** Refactoring for Open Source / Distribution
 > **Current Version:** v0.1.0-alpha
@@ -25,7 +25,7 @@
 
 ## 📋 Progress Tracker
 
-- [x] Rename project to `gemini-for-coding-toolkit`
+- [x] Rename project to `gemini-coder-toolkit`
 - [x] Initialize directory structure (`skills/`, `dist/`, `docs/`)
 - [x] Interview user for Open Source License (Selected: GPL-3.0)
 - [x] Extract existing `.skill` files into `skills/` source folders

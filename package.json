@@ -1,13 +1,13 @@
 {
-  "name": "gemini-for-coding-toolkit",
+  "name": "gemini-coder-toolkit",
   "version": "0.1.0-alpha",
   "description": "A collection of task-automation skills explicitly formatted and packaged for compatibility with the Gemini CLI environment.",
   "license": "GPL-3.0",
   "author": "Gemini CLI Users",
-  "homepage": "https://github.com/google/gemini-for-coding-toolkit",
+  "homepage": "https://github.com/google/gemini-coder-toolkit",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/google/gemini-for-coding-toolkit.git"
+    "url": "git+https://github.com/google/gemini-coder-toolkit.git"
   },
   "keywords": [
     "gemini",
