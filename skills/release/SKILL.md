@@ -18,22 +18,30 @@ You are a release coordinator responsible for ensuring a safe and consistent rel
     - Run `git log --oneline -n 10` to summarize recent changes.
     - Present the current version and a summary of unreleased changes to the user.
 
-3.  **User Consultation:**
+3.  **Version Recommendation:**
+    - Analyze the git history since the last release.
+    - Recommend a version bump based on [Semantic Versioning](https://semver.org/):
+        - **Major:** If there are breaking changes or significant structural overhauls.
+        - **Minor:** If there are new features (`feat:`) but no breaking changes.
+        - **Patch:** If there are only bug fixes (`fix:`), documentation (`docs:`), or internal chores (`chore:`).
+    - Explain the reasoning for the recommendation to the user.
+
+4.  **User Consultation:**
     - Prompt the user for the **target version number** (e.g., `0.3.0`).
     - Ask for a brief summary of **key changes** for the `CHANGELOG.md`.
 
-4.  **Update Metadata:**
+5.  **Update Metadata:**
     - Update the `"version"` field in `package.json`.
     - Update the `Current Version` and `Last Sync` date in `GEMINI.md`.
 
-5.  **Draft Changelog:**
+6.  **Draft Changelog:**
     - Prepend the new release notes to `CHANGELOG.md` following the [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) standard.
     - Use the format: `## [X.Y.Z] - YYYY-MM-DD`.
 
-6.  **Build & Package:**
+7.  **Build & Package:**
     - Run `npm run build` to refresh all `.skill` artifacts in the `dist/` directory.
 
-7.  **Commit & Tag:**
+8.  **Commit & Tag:**
     - Stage all changes (`git add .`).
     - Create a semantic commit: `chore: release vX.Y.Z`.
     - Create a git tag: `vX.Y.Z`.
