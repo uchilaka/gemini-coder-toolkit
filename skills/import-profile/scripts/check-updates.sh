@@ -1,6 +1,11 @@
 #!/bin/bash
-BASELINE_FILE=~/.gemini/claude_baseline_hashes.txt
-NEW_HASHES=~/.gemini/claude_new_hashes.tmp
+# check-updates.sh - Ported from personal to GA toolkit
+set -e
+
+BASELINE_DIR="${GEMINI_DIR:-$HOME/.gemini}"
+BASELINE_FILE="$BASELINE_DIR/claude_baseline_hashes.txt"
+NEW_HASHES="$BASELINE_DIR/claude_new_hashes.tmp"
+SOURCE_DIR="${CLAUDE_DIR:-$HOME/.claude}"
 
 # Function to get MD5 hash of a file
 get_md5() {
@@ -14,9 +19,16 @@ get_md5() {
     fi
 }
 
-echo "Calculating current hashes for ~/.claude configuration..."
+if [ ! -d "$SOURCE_DIR" ]; then
+    echo "Error: Source directory $SOURCE_DIR not found." >&2
+    exit 1
+fi
+
+echo "Calculating current hashes for $SOURCE_DIR configuration..."
+mkdir -p "$BASELINE_DIR"
+
 # Find files and calculate hashes
-find ~/.claude -type f \( -path "*/memory/*" -o -path "*/goals/*" -o -path "*/skills/*" -o -name "settings.json" \) | while read -r file; do
+find "$SOURCE_DIR" -type f \( -path "*/memory/*" -o -path "*/goals/*" -o -path "*/skills/*" -o -name "settings.json" \) | while read -r file; do
     get_md5 "$file"
 done | sort > "$NEW_HASHES"
 
@@ -31,9 +43,7 @@ fi
 sort "$BASELINE_FILE" -o "$BASELINE_FILE"
 
 echo "Comparing current hashes to baseline..."
-DIFF_OUTPUT=$(diff "$BASELINE_FILE" "$NEW_HASHES")
-
-if [ -z "$DIFF_OUTPUT" ]; then
+if DIFF_OUTPUT=$(diff "$BASELINE_FILE" "$NEW_HASHES"); then
     echo "No changes detected since the last review."
     rm "$NEW_HASHES"
     exit 0

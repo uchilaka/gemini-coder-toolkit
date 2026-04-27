@@ -5,6 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.7.0-alpha] - 2026-04-27
+
+### Added
+- **Path to GA:** Introduced the `/path-to-ga` skill to analyze and optimize the toolkit for general availability and public distribution.
+
+### Changed
+- **Security Hardening:** Refactored `import-profile/check-updates.sh` and `summon-profile/summon.sh` to use configurable environment variables (`GEMINI_DIR`, `CLAUDE_DIR`) and secure `scp` paths, removing hardcoded personal infrastructure details.
+- **De-personalized Configuration:** Abstracted personal homelab details into a distinct "Personal Context" section in the global `gemini.md`.
+
+
 ## [0.6.1-alpha] - 2026-04-10
 
 ### Added

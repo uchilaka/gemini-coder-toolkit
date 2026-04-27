@@ -1,7 +1,7 @@
 # 🛠 Project Context: Gemini Coder Toolkit
 
 > **Status:** Refactoring for Open Source / Distribution
-> **Current Version:** v0.6.1-alpha
+> **Current Version:** v0.7.0-alpha
 > **Last Sync:** 2026-04-10
 
 ---
@@ -36,6 +36,7 @@
 - [x] Add CONTRIBUTING.md with community standards
 - [x] Verify build script and refresh distribution artifacts
 - [x] **Backport Latest Improvements:** Integrated Git Crypt support in `start-worktree` and robust MD5 tracking in `import-profile`.
+- [x] **GA Transition:** Created `/path-to-ga` skill, refactored core scripts for security and portability, and de-personalized global configurations.
 - [x] **Compatibility Reviewer:** Added a new `/specialist` sub-agent for macOS/WSL2/mise compatibility audits.
 
 ---
@@ -49,6 +50,7 @@
 - Project is GPL-3.0 licensed and versioned at `0.6.1-alpha`.
 - Added Compatibility Reviewer for macOS, WSL2, and mise.
 - Ready for initial distribution and user feedback.
+- **Tuning Session (2026-04-10):** Elevated memory preferences and workflow logic to global `~/.gemini/GEMINI.md`. Moved Rails-specific rules of engagement to the global `session-start.sh` hook for conditional injection. Added `install:extensions` package.json script for installing the `ralph` dependency.
 
 
 **AI Context Hint:** When instructed to install skills from this repository, run `for f in dist/*.skill; do gemini skills install "$f" --consent; done`. If developing/testing skills locally, run `gemini skills link ./skills`.

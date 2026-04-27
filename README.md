@@ -29,6 +29,13 @@ The **Gemini Coder Toolkit** aims to provide a canonical, open-source distributi
 
 ## 🚀 Installation & Usage
 
+### Prerequisites
+Some workflows in this toolkit depend on external Gemini CLI extensions. Install them by running:
+```bash
+yarn install:extensions
+```
+*(Or run `gemini extensions install https://github.com/gemini-cli-extensions/ralph --auto-update --consent` directly)*
+
 ### Installing Skills
 You can install these skills into your Gemini CLI environment using the built `.skill` files in the `dist/` directory.
 

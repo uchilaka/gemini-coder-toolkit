@@ -20,6 +20,7 @@ Activate the skill, and it will guide you through the process, prompting for the
    - Run the included `scripts/summon.sh` script, passing the target host and username.
    - The script will automatically backup the local state before pulling the remote files.
 3. **Verify:** Confirm with the user that the synchronization was successful and briefly summarize the changes.
+4. **Import Profile:** As the final step, immediately activate the `import-profile` skill to review the newly summoned `~/.claude` state and extract any applicable updates into the local Gemini environment.
 </instructions>
 
 ## Resources
